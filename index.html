@@ -3,7 +3,8 @@
 
     <style>
         body {
-            background-color: navy
+            background-color: #1a1a1a;
+            color: #f0f0f0;
             text-align: center;
         }
     </style>
@@ -16,4 +17,15 @@
     <iframe src="https://file.garden/ZvdGeKbDvGKGr37q/explode_it_seed3670279881.mp4" width="640" height="480">
     <p>Tetris Blocks Arts V4 (Not Mine)</p>
     <iframe src="https://drive.google.com/file/d/1hbFeUobY2ibE8zxWqaTLtnJKu3SKPFj0/preview" width="640" height="480">
+    <form>
+        <input type="checkbox" id="testcheckmark" name="testcheckmark" value="testing">
+        <label for="testcheckmark">Test Checkmark</label><br>
+    </form>
+    <script>
+        if (testcheckmark.checked) {
+            alert("im testing this checkbox because why not");
+        } else {
+            alert("please check the checkbox to see if it works.");
+        }
+    </script>
 </body>
