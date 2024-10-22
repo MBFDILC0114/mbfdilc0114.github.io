@@ -3,7 +3,7 @@
         <title>Home</title>
     </head>
     <style>
-        body.darkmode {
+        body {
             background-color: #1a1a1a;
             color: #f0f0f0;
             text-align: center;
@@ -27,12 +27,12 @@
         };
         lightmode.addEventListener("change", () => {
             if (lightmode.checked) {
-                body.classList.remove("darkmode");
+                body.classList.remove();
                 body.classList.add("lightmode");
                 modeLabel.textContent = "Light Mode";
             } else {
                 body.classList.remove("lightmode");
-                body.classList.add("darkmode");
+                body.classList.add();
                 modeLabel.textContent = "Dark Mode";
             }
         });
@@ -49,4 +49,4 @@
     <iframe src="https://file.garden/ZvdGeKbDvGKGr37q/explode_it_seed3670279881.mp4" width="640" height="480">
     <p>Tetris Blocks Arts V4 (Not Mine)</p>
     <iframe src="https://drive.google.com/file/d/1hbFeUobY2ibE8zxWqaTLtnJKu3SKPFj0/preview" width="640" height="480">
-    </body>
+</body>
