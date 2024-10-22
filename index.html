@@ -1,7 +1,6 @@
 <html>
     <head>
         <title>Home</title>
-        <!--[if IE]> <p>IE is not supported for this website. please use another browser.</p> <![endif]-->
     </head>
     <style>
         body {
@@ -10,6 +9,11 @@
             text-align: center;
         }
     </style>
+    <scripts>
+        if (navigator.userAgent("Internet Explorer")) {
+            alert("You are using IE, which is not supported. You should use another browser to get the best experience.");
+        }
+    </scripts>
 </html>
 
 <body>
