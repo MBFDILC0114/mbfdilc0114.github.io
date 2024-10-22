@@ -3,7 +3,7 @@
         <title>Home</title>
     </head>
     <style>
-        body {
+        body.darkmode {
             background-color: #1a1a1a;
             color: #f0f0f0;
             text-align: center;
@@ -18,14 +18,10 @@
         .switch {
             position: relative;
             display: inline-block;
-            width: 60px;
-            height: 34px;
         }
 
         .switch input {
             opacity: 0;
-            width: 0;
-            height: 0;
         }
 
         .slider {
@@ -85,14 +81,14 @@
             window.location.href="unsupported_browser.html";
         };
         lightmode.addEventListener("change", () => {
-            if (lightmode.checked) {
-                body.classList.remove();
-                body.classList.add("lightmode");
-                modeLabel.textContent = "Light Mode";
-            } else {
+            if (darkmode.checked) {
                 body.classList.remove("lightmode");
-                body.classList.add();
+                body.classList.add("darkmode");
                 modeLabel.textContent = "Dark Mode";
+            } else {
+                body.classList.remove("darkmode");
+                body.classList.add("lightmode");
+                modeLabel.textContent = "Light Mode"; 
             }
         });
     </script>
@@ -101,9 +97,9 @@
 <body>
     <p>ill put random shit i make here.</p>
     <div>
-        <label class="switch">
-            <input type="checkbox" id="lightmode">
-            <span class="slider"></span>
+        <label class="switch" for="darkmode">Dark Mode</label>
+            <input type="checkbox" checked id="darkmode">
+            <span class="slider round"></span>
         </label>
     </div>
 
