@@ -3,7 +3,7 @@
         <title>Home</title>
     </head>
     <style>
-        body {
+        body.darkmode {
             background-color: #1a1a1a;
             color: #f0f0f0;
             text-align: center;
@@ -24,13 +24,24 @@
         };
         if (navigator.userAgent.indexOf("mozilla|opera/i")!= -1) {
             window.location.href="unsupported_browser.html";
-        }
+        };
+        lightmode.addEventListener("change", () => {
+            if (lightmode.checked) {
+                body.classList.remove("darkmode");
+                body.classList.add("lightmode");
+                modeLabel.textContent = "Light Mode";
+            } else {
+                body.classList.remove("lightmode");
+                body.classList.add("darkmode");
+                modeLabel.textContent = "Dark Mode";
+            }
+        });
     </script>
 </html>
 
 <body>
     <p>ill put random shit i make here.</p>
-    <input type="checkbox" id="lightmode" name="lightmode" onclick="document.body.classList.toggle('lightmode');">
+    <input type="checkbox" id="lightmode" name="lightmode">
     <label for="lightmode">Light Mode</label>
 
     <p>MAGIX Vegas Pro 15.0 Crack:</p><a href="https://drive.google.com/file/d/14fOIUVNzftPmux1Et5GAOMUswpzZRgNZ/view?usp=sharing">Download Here</a>
