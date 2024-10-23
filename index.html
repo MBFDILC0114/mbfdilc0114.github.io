@@ -79,9 +79,7 @@
         if (navigator.userAgent.indexOf("Trident")!= -1) {
             window.location.href="unsupported_browser.html";
         };
-        if (navigator.userAgent.indexOf("mozilla|opera/i")!= -1) {
-            window.location.href="unsupported_browser.html";
-        };
+
         lightmode.addEventListener("change", () => {
             if (darkmode.checked) {
                 body.classList.remove("lightmode");
