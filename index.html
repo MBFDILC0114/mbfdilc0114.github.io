@@ -5,7 +5,7 @@
         <title>Home</title>
     </head>
     <style>
-        body.darkmode {
+        body {
             background-color: #1a1a1a;
             color: #f0f0f0;
             text-align: center;
@@ -20,10 +20,14 @@
         .switch {
             position: relative;
             display: inline-block;
+            width: 60px;
+            height: 34px;
         }
 
         .switch input {
             opacity: 0;
+            width: 0;
+            height: 0;
         }
 
         .slider {
@@ -83,10 +87,10 @@
         lightmode.addEventListener("change", () => {
             if (darkmode.checked) {
                 body.classList.remove("lightmode");
-                body.classList.add("darkmode");
+                body.classList.add();
                 modeLabel.textContent = "Dark Mode";
             } else {
-                body.classList.remove("darkmode");
+                body.classList.remove();
                 body.classList.add("lightmode");
                 modeLabel.textContent = "Light Mode"; 
             }
