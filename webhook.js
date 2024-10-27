@@ -3,7 +3,7 @@ fetch('https://discordapp.com/api/webhooks/1299906560591659058/qzoQ5kW3tsNd3zx2E
         'Content-Type': 'application/json'
     }, body: JSON.stringify({
         embeds: [{
-            title: "MBFDILC0114's Website", description: 'A website of mine', url: 'https://mbfdilc0114.github.io'
+            title: "MBFDILC0114's Website", description: 'A website of mine', url: 'https://mbfdilc0114.github.io/favicon.ico'
         }]
     })
 })
