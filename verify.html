@@ -3,7 +3,7 @@
         <title>Please verify that you are human</title>
     </head>
 
-    <script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS">
         function onSubmit() {
             grecaptcha.execute('6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS', {action: 'homepage'}).then(token => {
                 console.log(token);
