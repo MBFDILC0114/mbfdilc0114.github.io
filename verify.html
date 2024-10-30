@@ -1,22 +1,14 @@
 <html>
-    <head>
-        <title>Please verify that you are human</title>
-    </head>
-
-    <script>
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
-        
-    </script>
-</html>
-
-<body>
-    <form onsubmit="onSubmit()">
-        <script src="https://www.google.com/recaptcha/api.js?render=6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS"></script>
-        <button class="g-recaptcha"
-            data-sitekey="6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS"
-            data-callback="onSubmit"
-            data-action="submit">Submit</button>
+  <head>
+    <title>Please verify that you are human</title>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  </head>
+    
+  <body>
+    <form action="" method="POST">
+      <div class="h-captcha" data-sitekey="cc70862a-8fd4-4a9e-a3a4-8ae4120ecd44"></div>
+      <br />
+      <input type="submit" value="Submit" />
     </form>
-</body>
+  </body>
+</html>
