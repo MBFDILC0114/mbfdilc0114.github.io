@@ -4,17 +4,19 @@
     </head>
 
     <script>
-        function onSubmit() {
-            grecaptcha.execute('6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS', {action: 'homepage'}).then(token => {
-                console.log(token);
-            });
+        function onSubmit(token) {
+            document.getElementById("verify").submit();
         }
+        
     </script>
 </html>
 
 <body>
     <form onsubmit="onSubmit()">
-        <script src="https://www.google.com/recaptcha/api.js?render=6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS" async defer></script>
-        <button type="submit">Submit</button>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS"></script>
+        <button class="g-recaptcha"
+            data-sitekey="6LeC6G8qAAAAALGQt5yWewGg_mpDLAxefQljkrJS"
+            data-callback="onSubmit"
+            data-action="submit">Submit</button>
     </form>
 </body>
