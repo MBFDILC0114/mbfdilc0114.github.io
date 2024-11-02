@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Upload files here!</title>
+    </head>
+</html>
+
+<body>
+    <p>Upload a file:</p>
+
+    <script>
+        const express = require('express');
+        const multer = require('multer');
+        const app = express();
+        const upload = multer({ dest: 'uploads/'});
+        app.post('/upload', upload.single('file'), (req, res) => { res.send('file has been uploaded');
+        });
+        app.listen(3000, () => { console.log('server is running');
+        });
+    </script>
+</body>
