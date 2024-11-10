@@ -80,7 +80,7 @@
             border-radius: 50%;
         }
     </style>
-    
+    <!--might need to fix this toggle switch script-->
     <script>
         if (navigator.userAgent.indexOf("MSIE")!= -1) {
             window.location.href="unsupported_browser.html";
@@ -89,21 +89,18 @@
             window.location.href="unsupported_browser.html";
         };
 
-        try {
-            lightmode.addEventListener("change", () => {
-            if (darkmode.checked) {
-                body.classList.remove("lightmode");
-                body.classList.add();
-                modeLabel.textContent = "Dark Mode";
-            } else {
-                body.classList.remove();
-                body.classList.add("lightmode");
-                modeLabel.textContent = "Light Mode"; 
-            }
-        });
-        } catch(err) {
-            document.getElementById("crashhandler").style.display = "block"; console.error(err);
+        
+        lightmode.addEventListener("change", () => {
+        if (darkmode.checked) {
+            body.classList.remove("lightmode");
+            body.classList.add();
+            modeLabel.textContent = "Dark Mode";
+        } else {
+            body.classList.remove();
+            body.classList.add("lightmode");
+            modeLabel.textContent = "Light Mode"; 
         }
+        });
     </script>
     </head>
 </html>
