@@ -4,16 +4,19 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
     <style>
+
         body {
             background-color: #1a1a1a;
             color: #f0f0f0;
             text-align: center;
-        };
+            font: arial;
+        }
 
         body.lightmode {
             background-color: #f0f0f0;
             color: #1a1a1a;
             text-align: center;
+            font: arial;
         }
 
         body #crashhandler {
@@ -90,13 +93,13 @@
         };
 
         
-        lightmode.addEventListener("change", () => {
+        darkmode.addEventListener("change", () => {
         if (darkmode.checked) {
             body.classList.remove("lightmode");
-            body.classList.add();
+            body.classList.add("darkmode");
             modeLabel.textContent = "Dark Mode";
         } else {
-            body.classList.remove();
+            body.classList.remove("darkmode");
             body.classList.add("lightmode");
             modeLabel.textContent = "Light Mode"; 
         }
